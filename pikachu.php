@@ -1,23 +1,20 @@
 <?php
-
+	require_once 'attack.php';
 class Pikachu extends Pokemon {
-  public $name = 'Pikachu';
-  public $energyType = 'Lightning';
-  public $hitpoints = 60;
-  public $attack1 = 'electric ring';
-  public $attack2 = 'Pika Punch';
-  public $weakness = 'Fire';
-  public $resistance= 'fighting';
+
 
 	public function __construct(){
-		parent::__construct (
-		$this->name,
-		$this->energyType,
-		$this->hitpoints,
-		$this->attack1,
-		$this->attack2,
-		$this->weakness ,
-		$this->resistance);
+
+
+  		$name = 'Pikachu';
+  		$energyType = 'Lightning';
+  		$hitpoints = 60;
+  		$weakness = 'Fire | 2';
+  		$resistance = 'fighting | 10';
+		$myAttacks = [
+  		new Attack('Eletric ring' , 50), new Attack('Pika Punch',20)
+  ];
+		parent::__construct ($name,$energyType,$hitpoints,$myAttacks,$weakness,$resistance);
 
 	}
 

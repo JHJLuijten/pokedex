@@ -1,0 +1,13 @@
+<?php 
+class Resistance{
+	public $resistance;
+	public function __construct($resistance){
+		$this->resistance = $resistance;
+		
+
+	}
+
+}
+
+
+ ?>
