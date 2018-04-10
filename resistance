@@ -1,9 +1,10 @@
 <?php 
 class Resistance{
 	public $resistance;
-	public function __construct($resistance){
+	public $minus;
+	public function __construct($resistance , $minus){
 		$this->resistance = $resistance;
-		
+		$this->minus = $minus;
 
 	}
 

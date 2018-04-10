@@ -1,5 +1,5 @@
 <?php 
-class Attack{
+class Attack {
 	public $name;
 	public $dmg;
 	public function __construct($name,$dmg){
@@ -14,4 +14,8 @@ class Attack{
 }
 
 
+
+
  ?>
+
+ 

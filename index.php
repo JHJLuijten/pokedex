@@ -10,7 +10,7 @@ $pikachu->showAttacks();
 $pikachu->showWeakness();
 $pikachu->showResistance();
 print_r('<pre>' . $pikachu . '</pre>');
-/*$pikachu->attack($pikachu->attacks[0], $charmeleon);*/
+// $pikachu->Attack($charmeleon, $pikachu->attacks[0], $pikachu->energytype);
 
 $charmeleon = new Charmeleon();
 $charmeleon->showName();
@@ -20,4 +20,4 @@ $charmeleon->showAttacks();
 $charmeleon->showWeakness();
 $charmeleon->showResistance();
 print_r('<pre>' . $charmeleon . '</pre>');
-$charmeleon->attack($pikachu, $charmeleon->attacks[0]);
+$charmeleon->Attack($pikachu, 0);

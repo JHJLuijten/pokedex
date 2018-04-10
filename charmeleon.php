@@ -1,5 +1,6 @@
 <?php
 	require_once 'attack.php';
+	require_once 'resistance.php';
 class Charmeleon extends Pokemon {
 
 
@@ -9,8 +10,8 @@ class Charmeleon extends Pokemon {
   		$name = 'vuur_doggo';
   		$energyType = 'Fire';
   		$hitpoints = 60;
-  		$weakness = 'Water | 2';
-  		$resistance = 'Lightning | 10';
+  		$weakness = new Weakness ('Water') ;
+  		$resistance = new Resistance ('Lightning');
 		$myAttacks = [
   		new Attack('Flare' , 50), new Attack('Headbutt',20)
   ];

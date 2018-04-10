@@ -1,8 +1,15 @@
 <?php
-	class Pikachu extends Pokemon {
-	  	public $weakness = 'Vuur';
-	}
+	class Weakness  {
+	  	public $energytype;
+	  	// public $multiplier;
 
-	class Charmeleon extends Pokemon{
-		public $weakness = 'Water';
-	}
+	  	public function __construct($energytype){//, $multiplier
+	  		$this->energytype = $energytype;
+	  		// $this->multiplier = $multiplier;
+
+	  	}
+	  	public function __toString(){
+		return $this->energytype ;    //. ' , ' . $this->multiplier
+
+		}
+	 }

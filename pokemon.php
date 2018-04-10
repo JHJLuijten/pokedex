@@ -1,12 +1,13 @@
 <?php
 
-class pokemon  {
+class Pokemon  {
 	public $name; 
 	public $energytype; 
 	public $hitpoints;
 	public $attacks;
     public $weakness;
     public $resistance;
+
 
 
 
@@ -21,26 +22,37 @@ class pokemon  {
         
     }
 
-    public function attack($target, $attack) {
-        
-        $target->resistance->energytype;
-        $this->energytype;
-
-        if (attacks) {
-            if(target == true)
-                if($resistance = $energytype){
-                    $target->hitpoints - ($dmg - 10);
-                }
-                else($weakness = $energytype)
-                {
-                    $target->hitpoints-($dmg * 2);
-                
-                
-
-                }
-            }
-        }
+    public function attack($target, $attacknr){
+        $target->defend($this->attacks[$attacknr],$this->energytype);
     }
+    public function defend($attack, $attackerEnergytype){
+        echo $attack;
+        echo '<br>';
+        echo $attackerEnergytype;
+        echo '<br>';
+        echo $this->energytype;
+
+        //$target->resistance->energytype;
+        //$this->energytype;
+
+
+                if ($this->resistance == $attackerEnergytype) {
+                   $newDamage =  $this->hitpoints - $attack->dmg - 10;
+                    $this->hitpoints = $this->hitpoints + $newDamage;
+                } elseif ($this->weakness == $attackerEnergytype) {
+                   $newDamage =  $this->hitpoints - $attack->dmg * 2;
+                     $this->hitpoints = $this->hitpoints + $newDamage;
+                }
+                else {
+                    $newDamage = $this->hitpoints - $attack->dmg;
+                    $this->hitpoints = $this->hitpoints + $newDamage;
+                }
+
+                echo '<br>';
+                echo $this->hitpoints;
+         
+             }
+
 
     public function showName()
     {
