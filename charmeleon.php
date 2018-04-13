@@ -3,19 +3,19 @@
 	require_once 'resistance.php';
 class Charmeleon extends Pokemon {
 
+  //maakt een vuurdoggo aan met juiste waardes
+	public function __construct($name){
 
-	public function __construct(){
 
-
-  		$name = 'vuur_doggo';
-  		$energyType = 'Fire';
+  		$name = $name;
+  		$EnergyType = new EnergyType ('Fire');
   		$hitpoints = 60;
-  		$weakness = new Weakness ('Water') ;
-  		$resistance = new Resistance ('Lightning');
-		$myAttacks = [
+  		$weakness = new Weakness ('Water', 2) ;
+  		$resistance = new Resistance ('Lightning', 10);
+		  $myAttacks = [
   		new Attack('Flare' , 50), new Attack('Headbutt',20)
   ];
-		parent::__construct ($name,$energyType,$hitpoints,$myAttacks,$weakness,$resistance);
+		parent::__construct ($name,$EnergyType,$hitpoints,$myAttacks,$weakness,$resistance);
 
 	}
 
